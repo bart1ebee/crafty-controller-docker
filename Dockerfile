@@ -11,7 +11,7 @@ RUN apt-get update \
       && rm -rf /var/cache/apt/lists
 
 # File layout
-RUN mkdir /crafty_db /crafty_web
+RUN mkdir /crafty_db /crafty_web /server_backups /minecraft_servers
 WORKDIR /crafty_web
 
 # App requirements
