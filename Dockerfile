@@ -1,14 +1,14 @@
-# Alpine doesn't compile. musl vs glibc issues from argon2 password hashing dep.
-FROM python:3
+FROM python:3-alpine
 
 LABEL maintainer="Phillip Tarrant <https://gitlab.com/Ptarrant1> and Dockerfile created by David Kolb <https://github.com/dkolb>"
 
-RUN apt-get update \
-      && apt-get install -y \
-        default-jre \
-        libmariadb-dev \
-      && apt-get clean \
-      && rm -rf /var/cache/apt/lists
+RUN apk update \
+      && apk add --no-cache \
+        openjdk11 \
+        mariadb-dev \
+        g++ \
+        libffi-dev \
+        make
 
 # File layout
 RUN mkdir /crafty_db /crafty_web /server_backups /minecraft_servers
@@ -28,4 +28,5 @@ COPY ./startup.sh /crafty_web/
 EXPOSE 8000
 EXPOSE 25500-25600
 
-CMD "./startup.sh"
+CMD './startup.sh'
+#CMD ["python", "/crafty_web/crafty.py", "-c", "/crafty_web/configs/docker_config.yml"]
