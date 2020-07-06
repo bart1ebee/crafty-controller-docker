@@ -28,5 +28,5 @@ COPY ./startup.sh /crafty_web/
 EXPOSE 8000
 EXPOSE 25500-25600
 
-CMD './startup.sh'
+CMD "./startup.sh"
 #CMD ["python", "/crafty_web/crafty.py", "-c", "/crafty_web/configs/docker_config.yml"]
