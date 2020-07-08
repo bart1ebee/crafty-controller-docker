@@ -14,6 +14,8 @@ jobs:
           submodules: recursive
       - name: Build and Push Latest
         uses: docker/build-push-action@v1.1.0
+        env:
+          DOCKER_BUILDKIT: 1
         with:
           repository: dkolb/crafty-controller
           username: dkolb
@@ -21,3 +23,5 @@ jobs:
           tag_with_ref: false
           tags: edge
           add_git_labels: true
+          cache_froms: dkolb/crafty-controller:edge
+          buld_args: BUILDKIT_INLINE_CACHE=1

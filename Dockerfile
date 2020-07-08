@@ -1,4 +1,6 @@
 FROM python:3-alpine
+# Use yourself as a possible cache.
+ARG BUILDKIT_INLINE_CACHE=1
 
 LABEL maintainer="Phillip Tarrant <https://gitlab.com/Ptarrant1> and Dockerfile created by David Kolb <https://github.com/dkolb>"
 
