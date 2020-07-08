@@ -1,4 +1,4 @@
-name: Build and Push Release
+name: Build Release
 on:
   push:
     tags: '*'
@@ -15,4 +15,5 @@ jobs:
           username: dkolb
           password: ${{ secrets.DOCKER_TOKEN }}
           tag_with_ref: true
+          tags: latest
           add_git_labels: true

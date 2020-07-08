@@ -18,3 +18,11 @@ You will need two mounts:
     crafty will attempt to save backups.
   * If you mount elsewhere, you will need to reconfigure each individual 
     server to backup to the correct path.
+
+## Tags
+
+- `edge`: This is the head of the master branch.
+- `latest`: This is the latest tagged release.
+- `v3.1.Final`: The latest version of a particular verson of Crafty Controller.
+- `v3.1.Final-1`: A static tag of a particular release of this docker image.
+  the suffix increments for every build of a particular version of Crafty.
