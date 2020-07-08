@@ -4,7 +4,8 @@ on:
     branches:
       - main
 jobs:
-  update-description:
+  build-and-push:
+    name: Build and Push Edge
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
@@ -18,5 +19,5 @@ jobs:
           username: dkolb
           password: ${{ secrets.DOCKER_TOKEN }}
           tag_with_ref: false
-          edge: edge
+          tags: edge
           add_git_labels: true
