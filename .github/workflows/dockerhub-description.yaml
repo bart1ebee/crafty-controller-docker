@@ -1,0 +1,20 @@
+name: Build Main Branch
+on:
+  push:
+    branches:
+      - main
+jobs:
+  update-description:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v2
+      - name: Build and Push Latest
+        uses: docker/build-push-action@v1.1.0
+        with:
+          repository: dkolb/crafty-controller
+          username: dkolb
+          password: ${{ secrets.DOCKER_TOKEN }}
+          tag_with_ref: false
+          tags: latest
+          add_git_labels: true
