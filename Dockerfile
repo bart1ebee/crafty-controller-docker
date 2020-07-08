@@ -8,7 +8,9 @@ RUN apk update \
         mariadb-dev \
         g++ \
         libffi-dev \
-        make
+        make \
+        bash \
+        wget
 
 # File layout
 RUN mkdir /crafty_db /crafty_web /server_backups /minecraft_servers
