@@ -1,4 +1,4 @@
-name: Build Main Branch
+name: Build Latest
 on:
   push:
     branches:
@@ -9,6 +9,8 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v2
+        with:
+          submodules: recursive
       - name: Build and Push Latest
         uses: docker/build-push-action@v1.1.0
         with:
