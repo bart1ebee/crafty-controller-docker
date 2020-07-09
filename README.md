@@ -14,7 +14,7 @@ You will need two mounts:
   snapshot up this volume regularly.
 - A backups mount.  You can handle this one of two ways:
 
-  * You can mount into `/web_crafty/backups`. This is the default of where
+  * You can mount into `/crafty_web/backups`. This is the default of where
     crafty will attempt to save backups.
   * If you mount elsewhere, you will need to reconfigure each individual 
     server to backup to the correct path.
