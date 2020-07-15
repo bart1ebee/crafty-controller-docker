@@ -21,8 +21,16 @@ You will need two mounts:
 
 ## Tags
 
+Crafty's base versioning isn't quite semver compliant and then there's always
+nitpicky changes made at the container level so our tags are not semver
+complaint but they try to give you both intuitive and specific enough tags.
+
 - `edge`: This is the head of the master branch.
 - `latest`: This is the latest tagged release.
-- `v3.1.Final`: The latest version of a particular verson of Crafty Controller.
-- `v3.1.Final-1`: A static tag of a particular release of this docker image.
-  the suffix increments for every build of a particular version of Crafty.
+- `3.1.Final`: The latest version of a particular verson of Crafty Controller.
+  Crafty seems to follow Major, Minor, Discrminator (`Dev`, `Snapshot`, `Beta`,
+  `Final`), and then an *optional* patch version at the end. For instance,
+- `3.1.Final-1`: A static tag of a particular release of this docker image.
+  the suffix increments for every build of a particular version of Crafty. The
+  next build of `3.1.Final` will be `3.1.Final-2` and so on. The dash will
+  always delimit between the crafty version and the docker build version.
