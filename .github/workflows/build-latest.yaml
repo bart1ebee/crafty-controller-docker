@@ -24,4 +24,4 @@ jobs:
           tags: edge
           add_git_labels: true
           cache_froms: dkolb/crafty-controller:edge
-          buld_args: BUILDKIT_INLINE_CACHE=1
+          build_args: BUILDKIT_INLINE_CACHE=1
