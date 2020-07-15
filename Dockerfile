@@ -12,7 +12,8 @@ RUN apk update \
         libffi-dev \
         make \
         bash \
-        wget
+        wget \
+        rsync
 
 # File layout
 RUN mkdir /crafty_db /crafty_web /server_backups /minecraft_servers
