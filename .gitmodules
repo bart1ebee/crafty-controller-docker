@@ -1,4 +1,0 @@
-[submodule "crafty"]
-	path = crafty-web
-	url = https://gitlab.com/crafty-controller/crafty-web.git
-	branch = master

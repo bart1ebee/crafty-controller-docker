@@ -9,8 +9,12 @@ RUN apt-get update && apt-get install -y \
   openjdk-8-jre \
   libmysqlclient-dev \
   python3 \
+  git \
   python3-dev \
   python3-pip \
+  && git clone -b master https://gitlab.com/crafty-controller/crafty-web.git /crafty_web \
+  && cd /crafty_web \
+  && rm -rf .git/ \
 && rm -rf /var/lib/apt/lists/*
 
 RUN mkdir /crafty_db /crafty_web /server_backups /minecraft_server
