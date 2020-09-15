@@ -17,7 +17,7 @@ RUN apt-get update && apt-get install -y \
   && rm -rf .git/ \
 && rm -rf /var/lib/apt/lists/*
 
-RUN mkdir /crafty_db /crafty_web /server_backups /minecraft_server
+RUN mkdir /crafty_db /server_backups /minecraft_server
 
 COPY ./crafty-web/requirements.txt /crafty_web/requirements.txt
 RUN pip3 install -r /crafty_web/requirements.txt
